@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./JobList.css";
 
 const JobList = () => {
   const [jobs, setJobs] = useState([]);
@@ -18,20 +19,20 @@ const JobList = () => {
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "auto", padding: "20px" }}>
-      <h2>Manage Job Listings</h2>
+    <div className="joblist-container">
+      <h2 className="joblist-title">Manage Job Listings</h2>
       {jobs.length === 0 ? (
-        <p>No jobs posted yet.</p>
+        <p className="joblist-empty">No jobs posted yet.</p>
       ) : (
         jobs.map((job) => (
-          <div key={job.id} style={{ border: "1px solid #ccc", marginBottom: "10px", padding: "15px", borderRadius: "8px" }}>
-            <h4>{job.title}</h4>
+          <div key={job.id} className="joblist-card">
+            <h4 className="joblist-jobtitle">{job.title}</h4>
             <p><strong>Type:</strong> {job.jobType}</p>
             <p><strong>Location:</strong> {job.location}</p>
             <p><strong>Workplace:</strong> {job.workplaceType}</p>
             <p><strong>Requirements:</strong> {job.requirements}</p>
-            <Link to={`/edit-job/${job.id}`} style={{ marginRight: "10px" }}>Edit</Link>
-            <button onClick={() => handleDelete(job.id)}>Delete</button>
+            <Link to={`/edit-job/${job.id}`} className="joblist-edit">Edit</Link>
+            <button className="joblist-delete" onClick={() => handleDelete(job.id)}>Delete</button>
           </div>
         ))
       )}

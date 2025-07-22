@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./DashboardStyles.css";
+import "./DashBoardStyles.css"; // Assuming you have a CSS file for styling
 
 const JobProviderProfile = () => {
   const [applications, setApplications] = useState([]);
@@ -36,13 +36,13 @@ const JobProviderProfile = () => {
   }, [company]);
 
   return (
-    <div className="profile-page">
+    <div className="profile-container">
       <h2 className="profile-title">{company} – Job Applications</h2>
 
       {loading ? (
-        <p className="loading">Loading...</p>
+        <p className="profile-loading">Loading...</p>
       ) : applications.length === 0 ? (
-        <p className="no-data">No applications received yet.</p>
+        <p className="profile-no-data">No applications received yet.</p>
       ) : (
         <div className="application-list">
           {applications.map((app) => (
@@ -50,7 +50,7 @@ const JobProviderProfile = () => {
               <p><strong>Candidate Name:</strong> {app.candidateName}</p>
               <p><strong>Email:</strong> {app.email}</p>
               <p>
-                <strong>Resume:</strong>{" "}
+                <strong>Resume:</strong>{' '}
                 <a href={app.resume} target="_blank" rel="noreferrer">
                   View Resume
                 </a>

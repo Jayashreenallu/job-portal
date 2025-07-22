@@ -7,6 +7,7 @@ import JobList from './components/JobList';
 import EditJob from './components/EditJob';
 import SelectCompany from './components/Selectcompany';
 import JobProviderProfile from './components/JobProviderProfile';
+import './App.css';
 
 function App() {
   return (

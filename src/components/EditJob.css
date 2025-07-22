@@ -1,0 +1,83 @@
+.editjob-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.editjob-title {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.editjob-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.editjob-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+  font-size: 1rem;
+}
+
+.editjob-input,
+.editjob-select,
+.editjob-textarea {
+  padding: 10px 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  color: #222;
+  transition: border 0.2s;
+  margin-bottom: 2px;
+}
+
+.editjob-input:focus,
+.editjob-select:focus,
+.editjob-textarea:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px #e3ffe3;
+}
+
+.editjob-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.editjob-button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(40,167,69,0.08);
+}
+
+.editjob-button:hover {
+  background: #218838;
+}
+
+@media (max-width: 700px) {
+  .editjob-container {
+    padding: 18px 6px;
+    max-width: 98vw;
+  }
+  .editjob-title {
+    font-size: 1.3rem;
+  }
+} 

@@ -1,38 +1,67 @@
 .profile-container {
-  background-color: #121212;
-  color: white;
+  background: #f9fafe;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2.5rem 0.5rem;
   font-family: Arial, sans-serif;
 }
 
-.profile-heading {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+.profile-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
   text-align: center;
-  color: #ffffff;
+  color: #1a2233;
 }
 
 .application-list {
-  list-style-type: none;
-  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.application-item {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
+.application-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
 }
 
-.application-item h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+.application-card:hover {
+  transform: scale(1.01);
 }
 
-.application-item p {
-  margin: 0.25rem 0;
-  color: #ccc;
+.application-card p {
+  margin: 10px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.application-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.application-card a:hover {
+  text-decoration: underline;
+}
+
+.profile-loading,
+.profile-no-data {
+  text-align: center;
+  color: #555;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+  .profile-title {
+    font-size: 1.2rem;
+  }
+  .application-card {
+    padding: 12px 6px;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "./EditJob.css";
 
 const EditJob = () => {
   const { id } = useParams();
@@ -39,35 +40,35 @@ const EditJob = () => {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
-      <h2>Edit Job</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Job Title:</label>
-        <input type="text" name="title" value={formData.title} onChange={handleChange} required />
+    <div className="editjob-container">
+      <h2 className="editjob-title">Edit Job</h2>
+      <form className="editjob-form" onSubmit={handleSubmit}>
+        <label className="editjob-label">Job Title:</label>
+        <input className="editjob-input" type="text" name="title" value={formData.title} onChange={handleChange} required />
 
-        <label>Workplace Type:</label>
-        <select name="workplaceType" value={formData.workplaceType} onChange={handleChange} required>
+        <label className="editjob-label">Workplace Type:</label>
+        <select className="editjob-select" name="workplaceType" value={formData.workplaceType} onChange={handleChange} required>
           <option value="">Select</option>
           <option value="Remote">Remote</option>
           <option value="Hybrid">Hybrid</option>
           <option value="On-Site">On-Site</option>
         </select>
 
-        <label>Location:</label>
-        <input type="text" name="location" value={formData.location} onChange={handleChange} required />
+        <label className="editjob-label">Location:</label>
+        <input className="editjob-input" type="text" name="location" value={formData.location} onChange={handleChange} required />
 
-        <label>Job Type:</label>
-        <select name="jobType" value={formData.jobType} onChange={handleChange} required>
+        <label className="editjob-label">Job Type:</label>
+        <select className="editjob-select" name="jobType" value={formData.jobType} onChange={handleChange} required>
           <option value="">Select</option>
           <option value="Full-Time">Full-Time</option>
           <option value="Part-Time">Part-Time</option>
           <option value="Internship">Internship</option>
         </select>
 
-        <label>Requirements:</label>
-        <textarea name="requirements" value={formData.requirements} onChange={handleChange} required />
+        <label className="editjob-label">Requirements:</label>
+        <textarea className="editjob-textarea" name="requirements" value={formData.requirements} onChange={handleChange} required />
 
-        <button type="submit" style={{ marginTop: "10px" }}>Update Job</button>
+        <button className="editjob-button" type="submit">Update Job</button>
       </form>
     </div>
   );
