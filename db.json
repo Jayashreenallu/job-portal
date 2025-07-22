@@ -1,0 +1,72 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "TCS",
+      "emailDomain": "@tcs.com",
+      "password": "tcs123"
+    },
+    {
+      "id": 2,
+      "name": "Hexaware",
+      "emailDomain": "@hexaware.com",
+      "password": "hexaware123"
+    },
+    {
+      "id": 3,
+      "name": "Wipro",
+      "emailDomain": "@wipro.com",
+      "password": "wipro123"
+    },
+    {
+      "id": 4,
+      "name": "Cognizant",
+      "emailDomain": "@cognizant.com",
+      "password": "cognizant123"
+    },
+    {
+      "id": 5,
+      "name": "Accenture",
+      "emailDomain": "@accenture.com",
+      "password": "accenture123"
+    }
+  ],
+  
+    "jobs": [
+  {
+    "id": "5290",
+    "title": "Java Developer",
+    "company": "TCS",
+    "workplaceType": "Remote",
+    "location": "Chennai,Tamilnadu,India",
+    "jobType": "Full-Time",
+    "requirements": "Strong problem solving skills, bachelor degree in computer science."
+  },
+  {
+    "id": "6452",
+    "title": "Frontend Developer",
+    "company": "Accenture",
+    "workplaceType": "Hybrid",
+    "location": "Bangalore,Karnataka,India",
+    "jobType": "Part-Time",
+    "requirements": "React.js, HTML/CSS, UI experience."
+  }
+],
+
+  "applications": [
+    {
+      "id": 1,
+      "jobId": "5290",
+      "candidateName": "Meena",
+      "email": "meena@gmail.com",
+      "resume": "http://example.com/resume1.pdf"
+    },
+    {
+      "id": 2,
+      "jobId": "6452",
+      "candidateName": "Ravi Kumar",
+      "email": "ravi.kumar@gmail.com",
+      "resume": "http://example.com/resume2.pdf"
+    }
+  ]
+}

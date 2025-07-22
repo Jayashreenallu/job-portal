@@ -1,0 +1,57 @@
+/* For profile page styling */
+
+.profile-page {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.profile-title {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 2rem;
+}
+
+.application-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.application-card:hover {
+  transform: scale(1.01);
+}
+
+.application-card p {
+  margin: 10px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.application-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.application-card a:hover {
+  text-decoration: underline;
+}
+
+.loading,
+.no-data {
+  text-align: center;
+  color: #555;
+  margin-top: 2rem;
+}
